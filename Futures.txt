@@ -23,10 +23,12 @@ Parâmetros:
 {leverage} = Sua alavancagem (1 a 125).
 {methodop} = Isolated ou Cross (Isolado consome apenas o valor que você configurou na aba configurações. Cross tem a função de manter sua posição aberta até consumir o seu saldo total de USDT do seu Futures).
 
+
+####################################################################
 Exemplo de requisição Long:
 http://actioncryptomonitor.com.br/v2/sendSignal/?method=futures&key={CHAVE}&typeop=Long&asset=BTCUSDT&entryprice=&alvo=12000&stoploss=9600&leverage=10&methodop=Isolated
 
-#Requisição de Futures#
+#Requisição de Futures Long#
 Legenda:
 Req.tipo: Long.
 Req.Paridade: BTCUSDT.
@@ -35,12 +37,14 @@ Req.Alvo: 12000 (Realizar venda automaticamente em 12000 doláres).
 Req.Stoploss: Realizar stoploss em 9600.
 Req.Avalancagem: 10x.
 Req.Metódo: Isolado.
+####################################################################
 
 
+####################################################################
 Exemplo de requisição Short:
 http://actioncryptomonitor.com.br/v2/sendSignal/?method=futures&key={CHAVE}&typeop=Short&asset=BTCUSDT&entryprice=&alvo=9600&stoploss=12000&leverage=10&methodop=Isolated
 
-#Requisição de Futures#
+#Requisição de Futures Short#
 Legenda:
 Req.tipo: Short.
 Req.Paridade: BTCUSDT.
@@ -49,7 +53,7 @@ Req.Alvo: 9600 (Realizar venda automaticamente em 9600 doláres).
 Req.Stoploss: Realizar stoploss em 12000.
 Req.Avalancagem: 10x.
 Req.Metódo: Isolado.
-
+####################################################################
 
 
 
