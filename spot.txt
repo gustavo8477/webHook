@@ -1,0 +1,52 @@
+#######################################################
+############# ACTIONCRYPTOMONITOR v2 ##################
+#######################################################
+      https://actioncryptomonitor.com.br/
+      
+     
+1° - Acesse seu menu Conta->Webhook
+2° - Habilite a requisição do Webhook e copie a chave de implementação.
+
+
+Método de requisição: GET
+SSL Obrigátorio: Não
+
+Parâmetros: 
+
+{method} = spot ou futures.
+{key} = sua chave de webhook.
+{asset} = Nome da Paridade.
+{entryprice} = Preço de entrada.
+{target1} = Alvo 1 que deseja executar a ordem.
+{target2} = Alvo 2 que deseja executar a ordem.
+{target3} = Alvo 3 que deseja executar a ordem.
+{stoploss} = Valor do seu stoploss.
+
+####################################################################
+Exemplo de requisição:
+http://actioncryptomonitor.com.br/v2/sendSignal/?method=spot&key={CHAVE}&asset=BTCUSDT&entryprice=&target1=12000&target2=12500&target3=13000&stoploss=9600
+
+Legenda:
+Req.Paridade: BTCUSDT.
+Req.Preço de entrada: Vazio (valor de mercado).
+Req.Target1: 12000 (Realizar venda automaticamente em 12000 doláres).
+Req.Target2: 12500 (Realizar venda automaticamente em 12500 doláres).
+Req.Target3: 13500 (Realizar venda automaticamente em 13000 doláres).
+Req.Stoploss: Realizar stoploss em 9600.
+####################################################################
+
+
+
+Códigos de erros:
+invalid_signal_data = Você deixou algum parametro em branco.
+invalid_signal_price = Você não completou corretamente o preço de entrada do seu sinal.
+invalid_signal_asset = Paridade escolhida é inválida.
+invalid_signal_target = Verifique se os seus alvos. 
+
+@Condições:
+Target 1 não pode ser maior que Target 2 ou Target 3.
+Target 2 não pode ser maior que Target 3.
+Target 3 não pode ser menor que Target 1 ou Target 2.
+Seus Targets não podem ser menores que o valor de compra (Entryprice).
+
+invalid_signal_stoploss = Seu stoploss não pode ser maior que o valor de compra.
