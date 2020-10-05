@@ -31,7 +31,7 @@ Req.Paridade: BTCUSDT.
 Req.Preço de entrada: Vazio (valor de mercado).
 Req.Target1: 12000 (Realizar venda automaticamente em 12000 doláres).
 Req.Target2: 12500 (Realizar venda automaticamente em 12500 doláres).
-Req.Target3: 13500 (Realizar venda automaticamente em 13000 doláres).
+Req.Target3: 13000 (Realizar venda automaticamente em 13000 doláres).
 Req.Stoploss: Realizar stoploss em 9600.
 ####################################################################
 
