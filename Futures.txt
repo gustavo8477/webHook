@@ -23,7 +23,7 @@ Parâmetros:
 {leverage} = Sua alavancagem (1 a 125).
 {methodop} = Isolated ou Cross (Isolado consome apenas o valor que você configurou na aba configurações. Cross tem a função de manter sua posição aberta até consumir o seu saldo total de USDT do seu Futures).
 
-Exemplo de requisição:
+Exemplo de requisição Long:
 http://actioncryptomonitor.com.br/v2/sendSignal/?method=futures&key={CHAVE}&typeop=Long&asset=BTCUSDT&entryprice=&alvo=12000&stoploss=9600&leverage=10&methodop=Isolated
 
 #Requisição de Futures#
@@ -35,3 +35,32 @@ Req.Alvo: 12000 (Realizar venda automaticamente em 12000 doláres).
 Req.Stoploss: Realizar stoploss em 9600.
 Req.Avalancagem: 10x.
 Req.Metódo: Isolado.
+
+
+Exemplo de requisição Short:
+http://actioncryptomonitor.com.br/v2/sendSignal/?method=futures&key={CHAVE}&typeop=Short&asset=BTCUSDT&entryprice=&alvo=9600&stoploss=12000&leverage=10&methodop=Isolated
+
+#Requisição de Futures#
+Legenda:
+Req.tipo: Short.
+Req.Paridade: BTCUSDT.
+Req.Preço de entrada: Vazio (valor de mercado).
+Req.Alvo: 9600 (Realizar venda automaticamente em 9600 doláres).
+Req.Stoploss: Realizar stoploss em 12000.
+Req.Avalancagem: 10x.
+Req.Metódo: Isolado.
+
+
+
+
+Códigos de erros:
+invalid_signal_data = Você deixou algum parametro em branco.
+invalid_signal_price = Você não completou corretamente o preço de entrada do seu sinal.
+invalid_signal_asset = Paridade escolhida é inválida.
+invalid_signal_type_operation = Tipo de operação é inválido (Permitido apenas Long e Short).
+invalid_signal_method_operation = Método de operação inválido (Permitido apenas Isolated e Cross).
+invalid_signal_leverage = Alavancagem de operação inválida (Permitido de 1 a 125).
+invalid_signal_long_alvo = No tipo de operação Long, você não pode colocar um alvo menor que o valor de compra.
+invalid_signal_long_stoploss = No tipo de operação Long, você não pode colocar um stoploss maior que o valor de compra.
+invalid_signal_short_alvo = No tipo de operação Short, você não pode colocar um alvo maior que o valor de compra.
+invalid_signal_short_stoploss = No tipo de operação Short, você não pode colocar um stoploss menor que o valor de compra.
