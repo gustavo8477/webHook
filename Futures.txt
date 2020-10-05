@@ -7,4 +7,14 @@
 1° - Acesse seu menu Conta->Webhook
 2° - Habilite a requisição do Webhook e copie a chave de implementação.
 
+
+Método de requisição: GET
+SSL Obrigátorio: Não
+
+Parâmetros: 
+
+{method} = futures ou spot
+{key} = sua chave de webhook
+
+
 http://actioncryptomonitor.com.br/v2/sendSignal/?method=futures&key={CHAVE}
