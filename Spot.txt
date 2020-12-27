@@ -37,6 +37,20 @@ Req.Stoploss: Realizar stoploss em 9600.
 
 
 
+
+####################################################################
+Exemplo de requisição de sair posição a mercado:
+http://actioncryptomonitor.com.br/v2/sendSignal/?method=stopfutures&key=SEUWEBHOOK&asset=BTCUSDT
+
+#Requisição de Futures Stop Market#
+Legenda:
+Req.Paridade: BTCUSDT.
+####################################################################
+
+
+
+
+
 Códigos de erros:
 invalid_signal_data = Você deixou algum parametro em branco.
 invalid_signal_price = Você não completou corretamente o preço de entrada do seu sinal.
